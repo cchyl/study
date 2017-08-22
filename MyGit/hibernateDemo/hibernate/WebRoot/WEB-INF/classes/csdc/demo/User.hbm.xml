@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="csdc.demo.User" table="t_user">
+		<!-- 配置实体类id和表id对应 hibernate要求实体类有一个属性唯一值 hibernate要求表有字段作为唯一值 -->
+		<id name="uid" column="uid">
+			<!-- native：生成id值就是主键自增长 -->
+			<!--  <generator class="native"></generator>-->
+		</id>
+		<property name="userName" column="userName" />
+		<property name="password" column="password" />
+		<property name="address" column="address" />
+	</class>
+</hibernate-mapping>
